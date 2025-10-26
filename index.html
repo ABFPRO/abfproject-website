@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ABF Project</title>
-  </head>
-  <body class="bg-gray-100 text-gray-800 flex items-center justify-center h-screen">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABF Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero fade-in">
+    <h1>ABF PROJECT</h1>
+    <p class="subtitle">Custom aplikasi sesuka hati</p>
+    <a href="https://www.appsheet.com/start/13f9f1b1-a3c6-4a98-ad18-3db40ecb8ffd?platform=desktop#appName=TestPayment-285516818" 
+       class="btn" target="_blank">🚀 Launch AppSheet</a>
+  </header>
+
+  <section class="about slide-up">
+    <h2>Fajri</h2>
+    <p class="founder-role">Founder ABF Project</p>
+    <p class="description">
+      Founder ABF Project — Membangun sistem otomatis dan aplikasi custom sesuai kebutuhan bisnis.
+    </p>
+  </section>
+
+  <section class="projects fade-in">
+    <h2>My Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Kalkulator HPP</h3>
+        <p>Aplikasi perhitungan harga pokok produksi otomatis.</p>
+      </div>
+      <div class="card">
+        <h3>Test Payment</h3>
+        <p>Integrasi pembayaran online dengan Midtrans.</p>
+      </div>
+      <div class="card">
+        <h3>Sistem Voucher Otomatis</h3>
+        <p>Manajemen pembuatan dan distribusi voucher digital.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 ABF Project. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple animation trigger
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
+  </script>
+</body>
 </html>
